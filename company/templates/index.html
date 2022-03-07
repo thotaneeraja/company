@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>employee details table</h1><hr/><hr/><br/><br/>
+<table border="2px">
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>email</th>
+    </tr>
+{% for i in empdata %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.email}}</td>
+        <td>
+            <a href="/edit/{{i.name}}">Edit</a> &nbsp <a href="/delete/{{i.name}}">Delete</a>
+        </td>
+    </tr>
+{% endfor %}
+</table><br/><br/>
+<a href="/logout/"><button type="button">logout</button></a><br/><br/>
+<a href="/neeraja/"><button type="button">Create</button></a>
+</body>
+</html>
